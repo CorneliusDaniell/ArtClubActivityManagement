@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ArtClubModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BalantaContClub">
+          <Key>
+            <PropertyRef Name="ID_BalantaContClub" />
+          </Key>
+          <Property Name="ID_BalantaContClub" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ID_Username" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_NumeEveniment" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_NumeResursaResursa" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_Data" Type="nvarchar" MaxLength="50" />
+          <Property Name="Zile" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cost" Type="nvarchar" MaxLength="50" />
+          <Property Name="Functie" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Eveniment">
+          <Key>
+            <PropertyRef Name="ID_NumeEveniment" />
+          </Key>
+          <Property Name="ID_NumeEveniment" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ID_NumeResursa" Type="nvarchar" MaxLength="50" />
+          <Property Name="NumarZile" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_Data" Type="nvarchar" MaxLength="50" />
+          <Property Name="Ora" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_TipPlata" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="EvenimenteleMembrului">
+          <Key>
+            <PropertyRef Name="ID_Username" />
+            <PropertyRef Name="ID_NumeEveniment" />
+          </Key>
+          <Property Name="ID_Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ID_NumeEveniment" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Functie">
+          <Key>
+            <PropertyRef Name="ID_NumeFunctie" />
+          </Key>
+          <Property Name="ID_NumeFunctie" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Locatie">
+          <Key>
+            <PropertyRef Name="ID_Locatie" />
+          </Key>
+          <Property Name="ID_Locatie" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Membrii">
+          <Key>
+            <PropertyRef Name="ID_Username" />
+          </Key>
+          <Property Name="ID_Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Nume" Type="nvarchar" MaxLength="50" />
+          <Property Name="Prenume" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Parola" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_NumeFunctie" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Resurse">
+          <Key>
+            <PropertyRef Name="ID_NumeResursa" />
+          </Key>
+          <Property Name="ID_NumeResursa" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ID_Locatie" Type="nvarchar" MaxLength="50" />
+          <Property Name="CostZi" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_Status" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Status">
+          <Key>
+            <PropertyRef Name="ID_Status" />
+          </Key>
+          <Property Name="ID_Status" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_Eveniment_Functie">
+          <End Role="Functie" Type="Self.Functie" Multiplicity="0..1" />
+          <End Role="Eveniment" Type="Self.Eveniment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Functie">
+              <PropertyRef Name="ID_NumeFunctie" />
+            </Principal>
+            <Dependent Role="Eveniment">
+              <PropertyRef Name="ID_TipPlata" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eveniment_Resurse1">
+          <End Role="Resurse" Type="Self.Resurse" Multiplicity="0..1" />
+          <End Role="Eveniment" Type="Self.Eveniment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Resurse">
+              <PropertyRef Name="ID_NumeResursa" />
+            </Principal>
+            <Dependent Role="Eveniment">
+              <PropertyRef Name="ID_NumeResursa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EvenimenteleMembrului_Eveniment">
+          <End Role="Eveniment" Type="Self.Eveniment" Multiplicity="1" />
+          <End Role="EvenimenteleMembrului" Type="Self.EvenimenteleMembrului" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Eveniment">
+              <PropertyRef Name="ID_NumeEveniment" />
+            </Principal>
+            <Dependent Role="EvenimenteleMembrului">
+              <PropertyRef Name="ID_NumeEveniment" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_EvenimenteleMembrului_Membrii">
+          <End Role="Membrii" Type="Self.Membrii" Multiplicity="1" />
+          <End Role="EvenimenteleMembrului" Type="Self.EvenimenteleMembrului" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Membrii">
+              <PropertyRef Name="ID_Username" />
+            </Principal>
+            <Dependent Role="EvenimenteleMembrului">
+              <PropertyRef Name="ID_Username" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Membrii_Functie">
+          <End Role="Functie" Type="Self.Functie" Multiplicity="0..1" />
+          <End Role="Membrii" Type="Self.Membrii" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Functie">
+              <PropertyRef Name="ID_NumeFunctie" />
+            </Principal>
+            <Dependent Role="Membrii">
+              <PropertyRef Name="ID_NumeFunctie" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Resurse_Locatie">
+          <End Role="Locatie" Type="Self.Locatie" Multiplicity="0..1" />
+          <End Role="Resurse" Type="Self.Resurse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Locatie">
+              <PropertyRef Name="ID_Locatie" />
+            </Principal>
+            <Dependent Role="Resurse">
+              <PropertyRef Name="ID_Locatie" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Resurse_Status">
+          <End Role="Status" Type="Self.Status" Multiplicity="0..1" />
+          <End Role="Resurse" Type="Self.Resurse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Status">
+              <PropertyRef Name="ID_Status" />
+            </Principal>
+            <Dependent Role="Resurse">
+              <PropertyRef Name="ID_Status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ArtClubModelStoreContainer">
+          <EntitySet Name="BalantaContClub" EntityType="Self.BalantaContClub" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Eveniment" EntityType="Self.Eveniment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EvenimenteleMembrului" EntityType="Self.EvenimenteleMembrului" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Functie" EntityType="Self.Functie" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Locatie" EntityType="Self.Locatie" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Membrii" EntityType="Self.Membrii" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Resurse" EntityType="Self.Resurse" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Status" EntityType="Self.Status" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Eveniment_Functie" Association="Self.FK_Eveniment_Functie">
+            <End Role="Functie" EntitySet="Functie" />
+            <End Role="Eveniment" EntitySet="Eveniment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eveniment_Resurse1" Association="Self.FK_Eveniment_Resurse1">
+            <End Role="Resurse" EntitySet="Resurse" />
+            <End Role="Eveniment" EntitySet="Eveniment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EvenimenteleMembrului_Eveniment" Association="Self.FK_EvenimenteleMembrului_Eveniment">
+            <End Role="Eveniment" EntitySet="Eveniment" />
+            <End Role="EvenimenteleMembrului" EntitySet="EvenimenteleMembrului" />
+          </AssociationSet>
+          <AssociationSet Name="FK_EvenimenteleMembrului_Membrii" Association="Self.FK_EvenimenteleMembrului_Membrii">
+            <End Role="Membrii" EntitySet="Membrii" />
+            <End Role="EvenimenteleMembrului" EntitySet="EvenimenteleMembrului" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Membrii_Functie" Association="Self.FK_Membrii_Functie">
+            <End Role="Functie" EntitySet="Functie" />
+            <End Role="Membrii" EntitySet="Membrii" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Resurse_Locatie" Association="Self.FK_Resurse_Locatie">
+            <End Role="Locatie" EntitySet="Locatie" />
+            <End Role="Resurse" EntitySet="Resurse" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Resurse_Status" Association="Self.FK_Resurse_Status">
+            <End Role="Status" EntitySet="Status" />
+            <End Role="Resurse" EntitySet="Resurse" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ArtClubModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BalantaContClub">
+          <Key>
+            <PropertyRef Name="ID_BalantaContClub" />
+          </Key>
+          <Property Name="ID_BalantaContClub" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ID_Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_NumeEveniment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_NumeResursaResursa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_Data" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Zile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cost" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Functie" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Eveniment">
+          <Key>
+            <PropertyRef Name="ID_NumeEveniment" />
+          </Key>
+          <Property Name="ID_NumeEveniment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ID_NumeResursa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NumarZile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_Data" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Ora" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_TipPlata" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Functie" Relationship="Self.FK_Eveniment_Functie" FromRole="Eveniment" ToRole="Functie" />
+          <NavigationProperty Name="Resurse" Relationship="Self.FK_Eveniment_Resurse1" FromRole="Eveniment" ToRole="Resurse" />
+          <NavigationProperty Name="Membriis" Relationship="Self.EvenimenteleMembrului" FromRole="Eveniment" ToRole="Membrii" />
+        </EntityType>
+        <EntityType Name="Functie">
+          <Key>
+            <PropertyRef Name="ID_NumeFunctie" />
+          </Key>
+          <Property Name="ID_NumeFunctie" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Eveniments" Relationship="Self.FK_Eveniment_Functie" FromRole="Functie" ToRole="Eveniment" />
+          <NavigationProperty Name="Membriis" Relationship="Self.FK_Membrii_Functie" FromRole="Functie" ToRole="Membrii" />
+        </EntityType>
+        <EntityType Name="Locatie">
+          <Key>
+            <PropertyRef Name="ID_Locatie" />
+          </Key>
+          <Property Name="ID_Locatie" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Resurses" Relationship="Self.FK_Resurse_Locatie" FromRole="Locatie" ToRole="Resurse" />
+        </EntityType>
+        <EntityType Name="Membrii">
+          <Key>
+            <PropertyRef Name="ID_Username" />
+          </Key>
+          <Property Name="ID_Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nume" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Prenume" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Parola" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_NumeFunctie" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Functie" Relationship="Self.FK_Membrii_Functie" FromRole="Membrii" ToRole="Functie" />
+          <NavigationProperty Name="Eveniments" Relationship="Self.EvenimenteleMembrului" FromRole="Membrii" ToRole="Eveniment" />
+        </EntityType>
+        <EntityType Name="Resurse">
+          <Key>
+            <PropertyRef Name="ID_NumeResursa" />
+          </Key>
+          <Property Name="ID_NumeResursa" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ID_Locatie" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CostZi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ID_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Eveniments" Relationship="Self.FK_Eveniment_Resurse1" FromRole="Resurse" ToRole="Eveniment" />
+          <NavigationProperty Name="Locatie" Relationship="Self.FK_Resurse_Locatie" FromRole="Resurse" ToRole="Locatie" />
+          <NavigationProperty Name="Status" Relationship="Self.FK_Resurse_Status" FromRole="Resurse" ToRole="Status" />
+        </EntityType>
+        <EntityType Name="Status">
+          <Key>
+            <PropertyRef Name="ID_Status" />
+          </Key>
+          <Property Name="ID_Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Resurses" Relationship="Self.FK_Resurse_Status" FromRole="Status" ToRole="Resurse" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_Eveniment_Functie">
+          <End Role="Functie" Type="Self.Functie" Multiplicity="0..1" />
+          <End Role="Eveniment" Type="Self.Eveniment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Functie">
+              <PropertyRef Name="ID_NumeFunctie" />
+            </Principal>
+            <Dependent Role="Eveniment">
+              <PropertyRef Name="ID_TipPlata" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Eveniment_Resurse1">
+          <End Role="Resurse" Type="Self.Resurse" Multiplicity="0..1" />
+          <End Role="Eveniment" Type="Self.Eveniment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Resurse">
+              <PropertyRef Name="ID_NumeResursa" />
+            </Principal>
+            <Dependent Role="Eveniment">
+              <PropertyRef Name="ID_NumeResursa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Membrii_Functie">
+          <End Role="Functie" Type="Self.Functie" Multiplicity="0..1" />
+          <End Role="Membrii" Type="Self.Membrii" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Functie">
+              <PropertyRef Name="ID_NumeFunctie" />
+            </Principal>
+            <Dependent Role="Membrii">
+              <PropertyRef Name="ID_NumeFunctie" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Resurse_Locatie">
+          <End Role="Locatie" Type="Self.Locatie" Multiplicity="0..1" />
+          <End Role="Resurse" Type="Self.Resurse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Locatie">
+              <PropertyRef Name="ID_Locatie" />
+            </Principal>
+            <Dependent Role="Resurse">
+              <PropertyRef Name="ID_Locatie" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Resurse_Status">
+          <End Role="Status" Type="Self.Status" Multiplicity="0..1" />
+          <End Role="Resurse" Type="Self.Resurse" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Status">
+              <PropertyRef Name="ID_Status" />
+            </Principal>
+            <Dependent Role="Resurse">
+              <PropertyRef Name="ID_Status" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="EvenimenteleMembrului">
+          <End Role="Eveniment" Type="Self.Eveniment" Multiplicity="*" />
+          <End Role="Membrii" Type="Self.Membrii" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="ArtClubEntities21" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BalantaContClubs" EntityType="Self.BalantaContClub" />
+          <EntitySet Name="Eveniments" EntityType="Self.Eveniment" />
+          <EntitySet Name="Functies" EntityType="Self.Functie" />
+          <EntitySet Name="Locaties" EntityType="Self.Locatie" />
+          <EntitySet Name="Membriis" EntityType="Self.Membrii" />
+          <EntitySet Name="Resurses" EntityType="Self.Resurse" />
+          <EntitySet Name="Status" EntityType="Self.Status" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <AssociationSet Name="FK_Eveniment_Functie" Association="Self.FK_Eveniment_Functie">
+            <End Role="Functie" EntitySet="Functies" />
+            <End Role="Eveniment" EntitySet="Eveniments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Eveniment_Resurse1" Association="Self.FK_Eveniment_Resurse1">
+            <End Role="Resurse" EntitySet="Resurses" />
+            <End Role="Eveniment" EntitySet="Eveniments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Membrii_Functie" Association="Self.FK_Membrii_Functie">
+            <End Role="Functie" EntitySet="Functies" />
+            <End Role="Membrii" EntitySet="Membriis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Resurse_Locatie" Association="Self.FK_Resurse_Locatie">
+            <End Role="Locatie" EntitySet="Locaties" />
+            <End Role="Resurse" EntitySet="Resurses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Resurse_Status" Association="Self.FK_Resurse_Status">
+            <End Role="Status" EntitySet="Status" />
+            <End Role="Resurse" EntitySet="Resurses" />
+          </AssociationSet>
+          <AssociationSet Name="EvenimenteleMembrului" Association="Self.EvenimenteleMembrului">
+            <End Role="Eveniment" EntitySet="Eveniments" />
+            <End Role="Membrii" EntitySet="Membriis" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ArtClubModelStoreContainer" CdmEntityContainer="ArtClubEntities21">
+          <EntitySetMapping Name="BalantaContClubs">
+            <EntityTypeMapping TypeName="ArtClubModel.BalantaContClub">
+              <MappingFragment StoreEntitySet="BalantaContClub">
+                <ScalarProperty Name="ID_BalantaContClub" ColumnName="ID_BalantaContClub" />
+                <ScalarProperty Name="ID_Username" ColumnName="ID_Username" />
+                <ScalarProperty Name="ID_NumeEveniment" ColumnName="ID_NumeEveniment" />
+                <ScalarProperty Name="ID_NumeResursaResursa" ColumnName="ID_NumeResursaResursa" />
+                <ScalarProperty Name="ID_Data" ColumnName="ID_Data" />
+                <ScalarProperty Name="Zile" ColumnName="Zile" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="Functie" ColumnName="Functie" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Eveniments">
+            <EntityTypeMapping TypeName="ArtClubModel.Eveniment">
+              <MappingFragment StoreEntitySet="Eveniment">
+                <ScalarProperty Name="ID_NumeEveniment" ColumnName="ID_NumeEveniment" />
+                <ScalarProperty Name="ID_NumeResursa" ColumnName="ID_NumeResursa" />
+                <ScalarProperty Name="NumarZile" ColumnName="NumarZile" />
+                <ScalarProperty Name="ID_Data" ColumnName="ID_Data" />
+                <ScalarProperty Name="Ora" ColumnName="Ora" />
+                <ScalarProperty Name="ID_TipPlata" ColumnName="ID_TipPlata" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Functies">
+            <EntityTypeMapping TypeName="ArtClubModel.Functie">
+              <MappingFragment StoreEntitySet="Functie">
+                <ScalarProperty Name="ID_NumeFunctie" ColumnName="ID_NumeFunctie" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Locaties">
+            <EntityTypeMapping TypeName="ArtClubModel.Locatie">
+              <MappingFragment StoreEntitySet="Locatie">
+                <ScalarProperty Name="ID_Locatie" ColumnName="ID_Locatie" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Membriis">
+            <EntityTypeMapping TypeName="ArtClubModel.Membrii">
+              <MappingFragment StoreEntitySet="Membrii">
+                <ScalarProperty Name="ID_Username" ColumnName="ID_Username" />
+                <ScalarProperty Name="Nume" ColumnName="Nume" />
+                <ScalarProperty Name="Prenume" ColumnName="Prenume" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Parola" ColumnName="Parola" />
+                <ScalarProperty Name="ID_NumeFunctie" ColumnName="ID_NumeFunctie" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Resurses">
+            <EntityTypeMapping TypeName="ArtClubModel.Resurse">
+              <MappingFragment StoreEntitySet="Resurse">
+                <ScalarProperty Name="ID_NumeResursa" ColumnName="ID_NumeResursa" />
+                <ScalarProperty Name="ID_Locatie" ColumnName="ID_Locatie" />
+                <ScalarProperty Name="CostZi" ColumnName="CostZi" />
+                <ScalarProperty Name="ID_Status" ColumnName="ID_Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Status">
+            <EntityTypeMapping TypeName="ArtClubModel.Status">
+              <MappingFragment StoreEntitySet="Status">
+                <ScalarProperty Name="ID_Status" ColumnName="ID_Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="ArtClubModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="EvenimenteleMembrului" TypeName="ArtClubModel.EvenimenteleMembrului" StoreEntitySet="EvenimenteleMembrului">
+            <EndProperty Name="Eveniment">
+              <ScalarProperty Name="ID_NumeEveniment" ColumnName="ID_NumeEveniment" />
+            </EndProperty>
+            <EndProperty Name="Membrii">
+              <ScalarProperty Name="ID_Username" ColumnName="ID_Username" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

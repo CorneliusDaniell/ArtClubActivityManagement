@@ -1,0 +1,124 @@
+﻿@model ArtClubActivityManagement.Eveniment
+@{
+    ViewBag.Title = "Create";
+    if (this.User.IsInRole("Administrator"))
+    {
+        Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Eveniment</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+           
+            <div class="col-md-4">
+                @Html.LabelFor(model => model.ID_NumeEveniment, new { @class = "control-label col-md-2" })
+                @Html.TextBoxFor(model => model.ID_NumeEveniment, new { @placeholder = "Prenume", @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ID_NumeEveniment)
+            </div>
+        </div>
+
+        <div class="form-group">
+           
+            <div class="col-md-4" >
+                @Html.LabelFor(model => model.ID_NumeResursa, "ID_NumeResursa", new { @class = "control-label col-md-2" })
+                @*@Html.DropDownList("ID_NumeResursa", String.Empty)*@
+                @Html.DropDownList("ID_NumeResursa", (IEnumerable<SelectListItem>)ViewBag.ID_NumeResursa, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ID_NumeResursa)
+            </div>
+        </div>
+
+        <div class="form-group">
+            
+            <div class="col-md-4">
+                @Html.LabelFor(model => model.NumarZile, new { @class = "control-label col-md-2" })
+                @Html.TextBoxFor(model => model.NumarZile, new { @placeholder = "Prenume", @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.NumarZile)
+            </div>
+        </div>
+
+        <div class="form-group">
+           
+            <div class="col-md-4" >
+                @Html.LabelFor(model => model.ID_Data, new { @class = "control-label col-md-2" })
+                @Html.TextBoxFor(model => model.ID_Data, new { @placeholder = "Prenume", @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ID_Data)
+            </div>
+        </div>
+
+        <div class="form-group">
+            
+            <div class="col-md-4">
+                @Html.LabelFor(model => model.Ora, new { @class = "control-label col-md-2" })
+                @Html.TextBoxFor(model => model.Ora, new { @placeholder = "Prenume", @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Ora)
+            </div>
+        </div>
+
+        <div class="form-group">
+           
+            <div class="col-md-4">
+                @Html.LabelFor(model => model.ID_TipPlata, "ID_TipPlata", new { @class = "control-label col-md-2" })
+                @*@Html.DropDownList("ID_TipPlata", String.Empty)*@
+                @Html.DropDownList("ID_TipPlata", (IEnumerable<SelectListItem>)ViewBag.ID_TipPlata, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ID_TipPlata)
+            </div>
+        </div>
+
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.Membrii, "ID_Username", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ID_Username", String.Empty)
+                @Html.ValidationMessageFor(model => model.Membrii)
+            </div>
+        </div>*@
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <h5>Adauga membri:</h5>
+                        @{
+    List<ArtClubActivityManagement.ViewModel.AssignedMembriiDaa> ids_username = ViewBag.Membrii;
+
+    foreach (var id_username in ids_username)
+    {
+                                <div class="col-md-4">
+                                    <input type="checkbox" name="selectedMembrii"
+                                           value="@id_username.ID_Username"
+                                           @(Html.Raw(id_username.Assigned ? "checked=\"checked\"" : "")) />
+                                    @id_username.ID_Username
+                                </div>
+
+    }
+}
+            </div>
+        </div>
+
+
+            <div class="form-group">
+                <div class="col-md-3" style="margin-top:20px;">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script>
+    $('#creeaza_eveniment').addClass('active');
+</script>

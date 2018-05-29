@@ -1,0 +1,91 @@
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\obj\Debug\UnitTestMath.csprojResolveAssemblyReference.cache
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\UnitTestMath.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\UnitTestMath.pdb
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\ArtClubActivityManagement.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.Mvc.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\EntityFramework.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.Http.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.WebPages.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.Helpers.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Linq.Dynamic.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.Razor.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.WebPages.Razor.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Net.Http.Formatting.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\Newtonsoft.Json.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\ArtClubActivityManagement.pdb
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.Mvc.xml
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\EntityFramework.xml
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.Http.xml
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.WebPages.xml
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.Helpers.xml
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.Razor.xml
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.WebPages.Razor.xml
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Net.Http.Formatting.xml
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\Newtonsoft.Json.xml
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\obj\Debug\UnitTestMath.dll
+E:\programing files\visual studio\sortare vector\ArtClubActivityManagement\UnitTestMath\obj\Debug\UnitTestMath.pdb
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\UnitTestMath.dll.config
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\UnitTestMath.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\UnitTestMath.pdb
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\ArtClubActivityManagement.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\EntityFramework.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\Grid.Mvc.Ajax.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\GridMvc.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Linq.Dynamic.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.Http.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.WebPages.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.Helpers.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.Razor.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\ArtClubActivityManagement.pdb
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\EntityFramework.xml
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.Http.xml
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.WebPages.xml
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.Helpers.xml
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.Razor.xml
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\obj\Debug\UnitTestMath.csprojResolveAssemblyReference.cache
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\obj\Debug\UnitTestMath.dll
+C:\Users\ccsma\Desktop\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\obj\Debug\UnitTestMath.pdb
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\UnitTestMath.dll.config
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\UnitTestMath.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\UnitTestMath.pdb
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\ArtClubActivityManagement.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\EntityFramework.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\Grid.Mvc.Ajax.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\GridMvc.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Linq.Dynamic.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.Http.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.WebPages.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.Helpers.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.Razor.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\Newtonsoft.Json.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\ArtClubActivityManagement.pdb
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\EntityFramework.xml
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.Http.xml
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.WebPages.xml
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.Helpers.xml
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.Razor.xml
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\Newtonsoft.Json.xml
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\obj\Debug\UnitTestMath.csprojResolveAssemblyReference.cache
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\obj\Debug\UnitTestMath.dll
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\obj\Debug\UnitTestMath.pdb
+C:\Users\cornelius\Desktop\ArtClubActivityManagementART\ArtClubActivityManagement\ArtClubActivityManagement\UnitTestMath\bin\Debug\HtmlAgilityPack.dll

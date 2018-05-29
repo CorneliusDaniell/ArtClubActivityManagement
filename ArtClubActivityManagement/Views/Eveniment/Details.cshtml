@@ -1,0 +1,88 @@
+﻿@model ArtClubActivityManagement.Eveniment
+
+@{
+    ViewBag.Title = "Details";
+    if (this.User.IsInRole("Administrator"))
+    {
+        Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Eveniment</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_NumeEveniment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ID_NumeEveniment)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_NumeResursa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_NumeResursa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumarZile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumarZile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_Data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_Data)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ora)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ID_TipPlata)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID_TipPlata)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Resurse.ID_Locatie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Resurse.ID_Locatie)
+        </dd>
+        <td>
+            Membriii evenimentuluiii !!!!!!!!!!! : 
+            @{
+                foreach (var membru in Model.Membriis)
+                {
+                    @membru.ID_Username <br />
+                    }
+            }
+        </td>
+
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_NumeEveniment }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
